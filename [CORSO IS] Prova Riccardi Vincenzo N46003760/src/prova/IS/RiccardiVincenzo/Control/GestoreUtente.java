@@ -10,7 +10,7 @@ import prova.IS.RiccardiVincenzo.Entity.Spesa;
 public class GestoreUtente {
 
 	/**
-	 * @param clienti: rappresenta la lista dei clienti nel sistema compresi gli abituali, inoltre in ogni cliente ci sono 
+	 * @param clienti: rappresenta la lista dei clienti nel sistema compresi gli abituali. In pancia a ogni cliente è salvato il relativo storico spese.
 	 * @param numSpeseMax: rappresenta il massimo numero di spese effettuate da un singolo utente. 
 	 */
 	private List<Cliente> clienti = new ArrayList<Cliente>();
@@ -48,8 +48,8 @@ public class GestoreUtente {
 	}
 
 	/**
-	 * @param N: rappresenta il numero di spese minime che gli utenti devono aver affettuato per quel determinato report
-	 * @return: ritorna la lista dei clienti validi oppure null peri casi di errore oppure lista vuota nell'eccezioni 
+	 * @param N: rappresenta il numero di spese minime che gli utenti devono aver affettuato per quel determinato report.
+	 * @return: ritorna la lista dei clienti validi oppure null peri casi di errore oppure lista vuota nell'eccezioni.
 	 */
 	public List<Cliente> generaResoconto(int N) {
 		
@@ -81,7 +81,7 @@ public class GestoreUtente {
 			System.out.println("I clienti che hanno conseguito almeno " + N + " acquisti sono :");
  
 			for (Cliente cliente : this.clienti) {
-				// per ogni cliente verifico il numero di spese effettuate e se maggiore di N lo inserisco nella lista di output
+				// per ogni cliente verifico il numero di spese effettuate e se maggiore di N lo inserisco nella lista di output.
 				if (cliente.getnumeroSpese() >= N) {
 						float help = (float) cliente.getTotaleSpeso();
 						System.out.println("L'utente " + cliente.getNomeUtente() + " ha coseguito "
