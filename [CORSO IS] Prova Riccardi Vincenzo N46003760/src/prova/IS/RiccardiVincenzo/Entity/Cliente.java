@@ -11,19 +11,29 @@ public class Cliente {
 	private String password;
 	private Number numeroCell;
 	private List<Spesa> storicoSpese = new ArrayList<Spesa>();
-	
-	
+	private boolean abituale;
+	 
 	
 	
 	
 	public Cliente() {
 		super();
+		this.abituale=false;
 	}
+	
 	public Cliente(String nomeUtente, String password, Number numeroCell) {
 		super();
 		this.nomeUtente = nomeUtente;
 		this.password = password;
 		this.numeroCell = numeroCell;
+		this.abituale=false;
+	}
+	
+	public boolean isAbituale() {
+		return abituale;
+	}
+	public void setAbituale(boolean abituale) {
+		this.abituale = abituale;
 	}
 	public String getNomeUtente() {
 		return nomeUtente;
